@@ -18,8 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/products/index', 'ProductController@index')-> name('homeProduct');
-Route::get('/admin/products/new', 'ProductController@new')-> name('newProduct');
-Route::get('/admin/products/edit', 'ProductController@edit')-> name('editProduct');
-Route::get('/admin/products/print', 'ProductController@print')-> name('printProduct');
-Route::get('/admin/products/create', 'ProductController@create')-> name('createProduct');
+Route::resource('products','ProductController')->middleware('auth');
+Route::resource('categories','CategoryController')->middleware('auth');

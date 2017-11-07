@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -8,34 +9,20 @@
 
                 <div class="panel-body">
                     @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
                 </div>
-                <h2> Logado com sucesso! </h2><br>
-                <a href="{{ url('/admin/products/index') }}" class="btn btn-primary btn-lg" > Produtos </a>
-                <a href="#" class="btn btn-primary btn-lg " disabled> Serviços </a>
-                <a href="#" class="btn btn-primary btn-lg" disabled> Manutenção </a>
-                <a href="#" class="btn btn-primary btn-lg " disabled> Vendas </a>
-                <a href="#" class="btn btn-primary btn-lg" disabled> Fornecimento </a>
-                <a href="#" class="btn btn-primary btn-lg " disabled> Sobre </a>
+                <h2 style="margin-left: 15px;"> Seja Bem Vindo </h2>
+                <h3 style="margin-left: 15px;"> Escolha uma Opção </h3><br>
+                <a href="{{ url('/products') }}" class="btn btn-info btn-lg left" style="margin-left: 30px;"> Produtos </a>
+                <a href="{{ url('/categories') }}" class="btn btn-success btn-lg left" style="margin-left: 15px;"> Categorias </a>
 
-
-        <!-- footer content -->
-        <footer>
-        <br>
-        <br>
-        <br>
-          <div class="pull-right">
-            Disciplina Linguagens de Programação II - Ciência da Computação - IFC Campus Videira
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
     </div>
