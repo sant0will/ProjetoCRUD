@@ -27,7 +27,7 @@ class ProductController extends Controller{
 
        Product::create($product);
 
-       return redirect()->back()->with('message', 'Produto Adicionado!');
+       return redirect('products')->with('message', 'Produto Adicionado!');
    }
 
     public function show($id){
@@ -49,12 +49,12 @@ class ProductController extends Controller{
         $product->categoria = $request->get('categoria');
         $product->save();
 
-        return redirect()->back()->with('message', 'Produto Alterado com Sucesso!');
+        return redirect('products')->with('message', 'Produto Alterado com Sucesso!');
         
     }
 
     public function destroy($id){   
         Product::findOrFail($id)->delete();
-        return redirect()->back()->with('message', 'Produto Deletado!');
+        return redirect('products')->with('message', 'Produto Deletado!');
     }
 }

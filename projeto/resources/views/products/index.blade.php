@@ -64,9 +64,9 @@
                           </a>                            
                         </td>
                         <td>
-                          <form action="{{action('ProductController@destroy', $product['id'])}}" method="post">
+                          <form id="delete" action="{{action('ProductController@destroy', $product['id'])}}" method="post">
                             {{csrf_field()}}
-                            <input name="_method" type="hidden" value="DELETE">
+                            <input name="_method" type="hidden" value="delete">
                             <button class="btn btn-danger glyphicon glyphicon-trash" type="submit"></button>
                           </form>
                         </td>
@@ -79,4 +79,6 @@
             </div>
           </div>
         </div>
+        <script>
+        </script>
         @endsection

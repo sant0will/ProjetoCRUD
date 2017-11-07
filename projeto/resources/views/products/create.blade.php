@@ -65,8 +65,8 @@
                   <div class="ln_solid">
                     <div class="form-group">
                       <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <button type="submit" class="btn btn-primary">Salvar</button>
-                        <a href="/products" class="btn btn-primary pull-right" type="button">Voltar</a>						 
+                        <a href="/products" class="btn btn-danger" type="button">Voltar</a> 
+                        <button type="submit" class="btn btn-success  pull-right">Salvar</button>					 
                       </div>            
                     </div>
                   </div>

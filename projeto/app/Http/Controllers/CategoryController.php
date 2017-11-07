@@ -26,7 +26,7 @@ class CategoryController extends Controller{
 
        Category::create($category);
 
-       return redirect()->back()->with('message', 'Categoria Adicionada!');
+       return redirect('categories')->with('message', 'Categoria Adicionada!');
     }
 
   
@@ -46,5 +46,5 @@ class CategoryController extends Controller{
 
     public function destroy($id){
         Category::findOrFail($id)->delete();
-        return redirect()->back()->with('message', 'Categoria Deletada!');    }
+        return redirect('categories')->with('message', 'Categoria Deletada!');    }
 }
